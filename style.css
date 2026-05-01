@@ -1,0 +1,106 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Canva Sans VF";
+}
+
+@font-face {
+  font-family: "Canva Sans VF";
+  src: url("./assets/fonts/CanvaSans-VF.ttf");
+}
+
+#container {
+  max-width: 100svw;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  width: 100svw;
+}
+
+header > nav {
+  /* this is a margin against the burger toggle */
+  margin-top: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+header > nav a {
+  text-decoration: none;
+  color: white;
+}
+
+header > nav a:hover {
+  text-decoration: underline;
+  color: gray;
+}
+
+main > section {
+  min-height: 40svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.projects {
+  width: 80svw;
+  height: 10rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects img {
+  height: 90%;
+}
+
+.certificates {
+  width: 80svw;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+}
+
+.certificates img {
+  height: 100%;
+}
+
+footer {
+  max-width: 80svw;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  .navigation-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  section {
+    width: 60svw;
+  }
+
+  .projects,
+  .certificates {
+    width: 50svw;
+    height: 20rem;
+  }
+}
