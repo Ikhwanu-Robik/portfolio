@@ -1,0 +1,113 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Canva Sans VF";
+}
+
+@font-face {
+  font-family: "Canva Sans VF";
+  src: url("/assets/fonts/CanvaSans-VF.ttf");
+}
+
+#container {
+  max-width: 100svw;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  height: 100svh;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.hero .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+}
+
+.hero .right {
+  display: flex;
+  align-items: center;
+}
+
+.hero .right img {
+  max-width: 100%;
+}
+
+.hero img[alt="arrow-down-icon"] {
+  position: absolute;
+  width: 3rem;
+  bottom: 10px;
+  animation: floating 3s ease-in-out infinite;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.details iframe {
+  width: 90%;
+}
+
+.screenshots {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.screenshots img {
+  width: 80%;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .hero {
+    flex-direction: row;
+  }
+
+  .hero .left, .hero .right {
+    width: 50%;
+    justify-content: center;
+  }
+
+  .details {
+    flex-direction: column;
+    width: 50svw;
+  }
+
+  .details iframe {
+    width: 50svw;
+    height: 70%;
+  }
+}
