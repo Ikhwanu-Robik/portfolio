@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   // TODO: record each visit and send the data to Supabase
+  // specifically:
+  // 1. how many seconds the visit last
+  // 2. which sections got the longest attention
+  // 3. which part got clicked
 
   let isMobile = window.matchMedia("(any-pointer: coarse)").matches;
 
