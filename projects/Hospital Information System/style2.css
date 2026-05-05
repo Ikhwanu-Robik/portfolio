@@ -12,10 +12,10 @@
 
 #container {
   max-width: 100svw;
+  max-height: 100svh;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
