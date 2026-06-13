@@ -3,103 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ikhwanu Robik Saputra</title>
-    <link rel="icon" href="favicon.ico" />
+    <title>Portofolio of Ikhwanu Robik</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
   </head>
   <body>
-    <div id="container">
-      <header>
-        <nav class="navigation-bar">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#certifications">Certfications</a>
-          <a href="#contacts">Contacts</a>
-        </nav>
-      </header>
-      <main>
-        <section id="about">
-          <h1>Hello, I'm Ikhwanu</h1>
-          <h2>A Web Developer</h2>
-        </section>
-        <section id="projects">
-          <h2>I Made These</h2>
-          <div class="projects">
-            <img
-              src="./assets/images/find-roommate-thumbnail.webp"
-              alt="find-roommate-thumbnail"
-            />
-            <a href="./projects/Find Roommate Platform"
-              >Find Roommate Platform</a
-            >
+    <div class="container">
+      <div class="card">
+        <div class="profile">
+          <img src="./assets/images/photo-of-ikhwanu.jpg" alt="photo of Ikhwanu">
+          <h2 class="name">Ikhwanu-Robik</h2>
+          <h3 class="specialization">Web Developer</h3>
+          <div class="contacts">
+            <a href="https://github.com/Ikhwanu-Robik">
+              <img src="./assets/icons/github.svg" alt="github">
+            </a>
+            <a href="mailto:robikikhwan@gmail.com">
+              <img src="./assets/icons/gmail.svg" alt="email">
+            </a>
           </div>
-          <div class="projects">
-            <img
-              src="./assets/images/hospital-information-thumbnail.webp"
-              alt="hospital-information-thumbnail"
-            />
-            <a href="./projects/Hospital Information System" class="projects"
-              >Hospital Information System</a
-            >
+        </div>        
+        <div class="portfolio">
+          <div class="projects-container">
+            <h2 class="title">Projects</h2>
+            <div class="content">
+              <div class="project-item">
+                <img src="./assets/images/find-roommate-thumbnail.webp" alt="find-roommate-thumbnail">
+                <p class="description">a platform allowing user to find a roommate with matching lifestyle</p>
+              </div>
+              <div class="project-item">
+                <img src="./assets/images/hospital-information-thumbnail.webp" alt="hospital-information-thumbnail">
+                <p class="description">manage the outpatient service of a hospital in a single web app</p>
+              </div>
+            </div>
           </div>
-        </section>
-        <section id="certifications">
-          <h2>Some Certificates</h2>
-          <div class="certificates">
-            <img
-              src="./assets/images/certificates/kelas_industri.webp"
-              alt="Sertifikat Crocodic Academy"
-            />
+          <div class="blogs-container">
+            <h2 class="title">Blogs</h2>
+            <div class="content">
+              <div class="blog-item">
+                <h2>Solving Housing Crisis with Room Sharing</h2>
+                <h5>3 days ago</h5>
+                <p>Housing is hella expensive nowadays. I wish to live in a comfortable house but I cannot...</p>
+              </div>
+              <div class="blog-item">
+                <h2>Lorem Ipsum</h2>
+                <h5>A month ago</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, aliquam?...</p>
+              </div>
+            </div>
           </div>
-          <div class="certificates">
-            <img
-              src="./assets//images/certificates/lks_kabupaten.webp"
-              alt="Sertifikat LKS Tingkat Kabupaten Wonogiri"
-            />
-          </div>
-          <div class="certificates">
-            <img
-              src="./assets//images/certificates/nilai_tertinggi_jurusan.webp"
-              alt="Sertifikat Nilai Tertinggi Jurusan"
-            />
-          </div>
-          <div class="certificates">
-            <img
-              src="./assets//images/certificates/dicoding_js.webp"
-              alt="Sertifikat Dicoding Academy Course Javascript"
-            />
-          </div>
-          <div class="certificates">
-            <img
-              src="./assets//images/certificates/dicoding_sql.webp"
-              alt="Sertifikat Dicoding Academy Course SQL"
-            />
-          </div>
-          <!-- TODO: if there's more than 4 certificates, hide them behind a "show more" -->
-        </section>
-        <section id="contacts">
-          <h2>How You Can Contact Me</h2>
-          <div class="contact-items">
-            <a href="https://github.com/Ikhwanu-Robik">Github: Ikhwanu-Robik</a>
-          </div>
-          <div class="contact-items">
-            <a href="mailto:robikikhwan@gmail.com"
-              >Email: robikikhwan@gmail.com</a
-            >
-          </div>
-          <div class="contact-items">
-            <a
-              href="https://www.linkedin.com/in/ikhwanu-robik-saputra-10a2ab3b2"
-              >LinkedIn: Ikhwanu Robik Saputra</a
-            >
-          </div>
-          <div class="contact-items">
-            <a href="https://instagram.com/ikuwandesu">Instagram: ikuwandesu</a>
-          </div>
-        </section>
-      </main>
-      <footer>Made without any caffein by Ikhwanu Robik Saputra</footer>
+        </div>
+      </div>
     </div>
   </body>
 </html>

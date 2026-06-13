@@ -5,6 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // 2. which sections got the longest attention
   // 3. which part got clicked
 
+  let secondsPassed = 0;
+  setInterval(() => {
+    secondsPassed += 0.5;
+    console.log(secondsPassed);
+  }, 500);
+
   let isMobile = window.matchMedia("(any-pointer: coarse)").matches;
 
   if (isMobile) {
