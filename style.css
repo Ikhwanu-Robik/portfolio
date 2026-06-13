@@ -103,3 +103,37 @@
   border-radius: 0.5rem;
   border: 1px solid rgb(198, 198, 198);
 }
+
+@media screen and (max-width: 700px) {
+  .container {
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .card {
+    width: 95%;
+    flex-direction: column;
+    padding: 0;
+    height: fit-content;
+    padding-bottom: 2rem;
+    border-radius: 2rem;
+  }
+
+  .profile {
+    width: 80%;
+  }
+
+  .portfolio {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .portfolio .projects-container, .portfolio .blogs-container {
+    border: none;
+  }
+
+  .portfolio .projects-container .content, .portfolio .blogs-container .content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
