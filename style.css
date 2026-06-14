@@ -143,6 +143,11 @@
 }
 
 @media screen and (max-width: 700px) {
+  #image-pop-up {
+    height: auto;
+    width: 90%;
+  }
+
   .container {
     align-items: flex-start;
     padding: 1rem;
