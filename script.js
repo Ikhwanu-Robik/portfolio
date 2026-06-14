@@ -1,72 +1,23 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // TODO: record each visit and send the data to Supabase
-  // specifically:
-  // 1. how many seconds the visit last
-  // 2. which sections got the longest attention
-  // 3. which part got clicked
+let images = document.querySelectorAll('img');
 
-  let secondsPassed = 0;
-  setInterval(() => {
-    secondsPassed += 0.5;
-    console.log(secondsPassed);
-  }, 500);
+images.forEach((image) => {
+  image.addEventListener('click', (e) => {
+    if (e.target.parentElement && e.target.parentElement.tagName == "A") {
+      return;
+    }
+    
+    let src = e.target.src;
+    let alt = e.target.alt;
 
-  let isMobile = window.matchMedia("(any-pointer: coarse)").matches;
+    document.getElementById('image-pop-up').src = src;
+    document.getElementById('image-pop-up').alt = alt;
 
-  if (isMobile) {
-    let burger = createNavBurger();
-    hideNavBar();
-    burger.onclick = showNavBarAndChangeListener;
-  }
+    document.getElementById('image-pop-up-container').classList.remove('invisible-pop-up');
+    document.getElementById('image-pop-up-container').classList.add('visible-pop-up');
+  });
+})
+
+document.getElementById('image-pop-up-container').addEventListener('click', (e) => {
+  document.getElementById('image-pop-up-container').classList.remove('visible-pop-up');
+  document.getElementById('image-pop-up-container').classList.add('invisible-pop-up');
 });
-
-const createNavBurger = () => {
-  let burger = document.createElement("div");
-  burger.classList.add("nav-burger");
-
-  let burgerIcon = document.createElement("img");
-  burgerIcon.alt = "burger_icon";
-  burgerIcon.src = "./assets/icons/burger.svg";
-  burgerIcon.style.height = "1rem";
-
-  burger.appendChild(burgerIcon);
-
-  document.querySelector("header").prepend(burger);
-  return burger;
-};
-
-const hideNavBarAndChangeListener = () => {
-  hideNavBar();
-
-  let crossIcon = document.createElement("img");
-  crossIcon.alt = "burger_icon";
-  crossIcon.src = "./assets/icons/burger.svg";
-  crossIcon.style.height = "1rem";
-
-  document.querySelector(".nav-burger").innerHTML = "";
-  document.querySelector(".nav-burger").appendChild(crossIcon);
-
-  document.querySelector(".nav-burger").onclick = showNavBarAndChangeListener;
-};
-
-const showNavBarAndChangeListener = () => {
-  showNavBar();
-
-  let burgerIcon = document.createElement("img");
-  burgerIcon.alt = "cross_icon";
-  burgerIcon.src = "./assets/icons/cross.svg";
-  burgerIcon.style.height = "1rem";
-
-  document.querySelector(".nav-burger").innerHTML = "";
-  document.querySelector(".nav-burger").appendChild(burgerIcon);
-
-  document.querySelector(".nav-burger").onclick = hideNavBarAndChangeListener;
-};
-
-const hideNavBar = () => {
-  document.querySelector(".navigation-bar").style.display = "none";
-};
-
-const showNavBar = () => {
-  document.querySelector(".navigation-bar").style.display = "flex";
-};
